@@ -2,6 +2,8 @@ package br.com.alura.escola;
 
 import br.com.alura.escola.aplicacao.aluno.matricula.MatricularAluno;
 import br.com.alura.escola.aplicacao.aluno.matricula.MatricularAlunoDto;
+import br.com.alura.escola.dominio.PublicadorDeEventos;
+import br.com.alura.escola.dominio.aluno.LogDeAlunoMatriculado;
 import br.com.alura.escola.dominio.aluno.RepositorioDeAlunos;
 import br.com.alura.escola.infraestrutura.aluno.RepositorioDeAlunosJpa;
 import br.com.alura.escola.infraestrutura.db.DbConnectionConfig;
@@ -17,7 +19,10 @@ public class MatricularAlunoPorLinhaDeComando {
         Session session = DbConnectionConfig.getSessionFactory().openSession();
         RepositorioDeAlunos repositorioDeAlunos = new RepositorioDeAlunosJpa(session);
 
-        MatricularAluno matricularAluno = new MatricularAluno(repositorioDeAlunos);
+        PublicadorDeEventos publicador = new PublicadorDeEventos();
+        publicador.adicionar(new LogDeAlunoMatriculado());
+
+        MatricularAluno matricularAluno = new MatricularAluno(repositorioDeAlunos, publicador);
         matricularAluno.executar(new MatricularAlunoDto(nome, cpf, email));
     }
 
