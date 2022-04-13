@@ -1,7 +1,7 @@
 package br.com.alura.escola.academico.infraestrutura.aluno;
 
 import br.com.alura.escola.academico.dominio.aluno.Aluno;
-import br.com.alura.escola.academico.dominio.aluno.CPF;
+import br.com.alura.escola.shared.dominio.CPF;
 import br.com.alura.escola.academico.dominio.aluno.FabricaDeAluno;
 import br.com.alura.escola.academico.infraestrutura.db.DbConnectionConfig;
 import org.hibernate.Session;

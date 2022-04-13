@@ -12,7 +12,7 @@
         <property name="hibernate.format_sql">true</property>
 
         <mapping class="br.com.alura.escola.academico.dominio.aluno.Aluno" />
-        <mapping class="br.com.alura.escola.academico.dominio.aluno.CPF" />
+        <mapping class="br.com.alura.escola.shared.dominio.CPF" />
         <mapping class="br.com.alura.escola.academico.dominio.aluno.Email" />
         <mapping class="br.com.alura.escola.academico.dominio.aluno.Telefone" />
 
