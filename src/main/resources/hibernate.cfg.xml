@@ -11,10 +11,10 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
-        <mapping class="br.com.alura.escola.dominio.aluno.Aluno" />
-        <mapping class="br.com.alura.escola.dominio.aluno.CPF" />
-        <mapping class="br.com.alura.escola.dominio.aluno.Email" />
-        <mapping class="br.com.alura.escola.dominio.aluno.Telefone" />
+        <mapping class="br.com.alura.escola.academico.dominio.aluno.Aluno" />
+        <mapping class="br.com.alura.escola.academico.dominio.aluno.CPF" />
+        <mapping class="br.com.alura.escola.academico.dominio.aluno.Email" />
+        <mapping class="br.com.alura.escola.academico.dominio.aluno.Telefone" />
 
     </session-factory>
 </hibernate-configuration>
